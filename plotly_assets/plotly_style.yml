@@ -1,0 +1,40 @@
+# This is the default styling for a Plotly chart
+{
+  layout:
+    {
+      paper_bgcolor: white,
+      plot_bgcolor: white,
+      colorway:
+        [
+          "#4e79a7",
+          "#f28e2c",
+          "#e15759",
+          "#76b7b2",
+          "#59a14f",
+          "#edc949",
+          "#af7aa1",
+          "#ff9da7",
+          "#9c755f",
+          "#bab0ab",
+        ],
+      margin: { t: 5, r: 10, b: 30, l: 40 },
+      font: { family: "Inter, Helvetica, Arial, sans-serif" },
+      modebar:
+        {
+          activecolor: grey,
+          bgcolor: "rgba(255, 255, 255, 0)",
+          color: lightgray,
+          orientation: v,
+          remove: [zoom2d, pan2d, select2d, lasso2d, zoomIn2d, zoomOut2d],
+        },
+      hoverlabel: { bgcolor: "rgba(255, 255, 255, 0.95)" },
+      xaxis: { tickwidth: 1, ticklen: 4, tickfont: { size: 14 } },
+      yaxis:
+        {
+          title: { font: { size: 16 }, standoff: 20 },
+          tickfont: { size: 14 },
+          gridcolor: "rgba(0, 0, 0, 0.15)",
+        },
+    },
+  config: { displayModeBar: hover },
+}
