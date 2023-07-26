@@ -1,10 +1,14 @@
 # Assets for nLine's Visualizations
 
-This repository contains a collection of assets for nLine's visualizations.
+This repository contains a collection of assets for nLine's visualizations. Currently it only contains the Plotly `layout`` and `config` parameters for our generic style.
 
-Currently it only contains the Plotly `layout`` and `config` parameters for our generic style.
+They can be loaded either in Python automatically:
 
-They can be loaded in Python by accessing the `plotly_style.yml` file.
+```py
+from pwdata.utils import plotly_style
+```
+
+or by accessing the `plotly_style.yml` file.
 
 ```py
 import plotly_assets
