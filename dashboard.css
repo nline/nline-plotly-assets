@@ -31,19 +31,19 @@
   text-align: center;
   align-items: center;
   width: min(100%, 768px);
-  background: "rgb(220, 220, 220)";
-  border: "lightgray solid 1px";
-  /* background: ${
-colorScheme === "dark"
-  ? "rgb(34, 37, 43)"
-  : "rgb(220, 220, 220)"};
-  border: ${
-colorScheme === "dark"
-  ? "1px solid rgba(204, 204, 220, 0.07)"
-  : "lightgray solid 1px"}; */
+  background: rgb(220, 220, 220); /* Default light background */
+  border: lightgray solid 1px; /* Default light border */
   border-radius: 20px;
   padding: 5px 10px;
   gap: 2em;
+}
+
+/* Styles for dark mode */
+@media (prefers-color-scheme: dark) {
+  .nl-header {
+    background: rgb(34, 37, 43); /* Dark background */
+    border: 1px solid rgba(204, 204, 220, 0.07); /* Dark border */
+  }
 }
 .nl-header h1,
 h2 {
