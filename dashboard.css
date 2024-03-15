@@ -1,13 +1,9 @@
 :root {
   --nl-header-bg-color: rgb(220, 220, 220);
   --nl-header-border: 1px solid lightgray;
+  --nl-header-dark-bg-color: rgb(34, 37, 43);
+  --nl-header-dark-border: 1px solid rgba(204, 204, 220, 0.07);
 }
-
-:root[color-scheme="dark"] {
-  --nl-header-bg-color: rgb(34, 37, 43);
-  --nl-header-border: 1px solid rgba(204, 204, 220, 0.07);
-}
-
 .nl-row {
   display: flex;
   column-gap: 40px;
@@ -48,6 +44,11 @@
   background: var(--nl-header-bg-color);
   border: var(--nl-header-border);
 }
+
+.ml-header[color-scheme="dark"] {
+  background: var(--nl-header-dark-bg-color) !important;
+  border: var(--nl-header-dark-border) !important;
+}
 .nl-header h1,
 h2 {
   margin: 5px 10px !important;
@@ -80,6 +81,7 @@ h2 {
   background-size: 100% !important;
   transition: all 0.3s ease !important;
 }
+
 .nl-card:hover .nl-home-card {
   border-radius: 10% !important;
   background-size: 110% !important;
