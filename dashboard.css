@@ -1,15 +1,11 @@
 :root {
-  --nl-header-bg-color: rgb(
-    220,
-    220,
-    220
-  ); /* Default background for light theme */
-  --nl-header-border: 1px solid lightgray; /* Default border for light theme */
+  --nl-header-bg-color: rgb(220, 220, 220);
+  --nl-header-border: 1px solid lightgray;
 }
 
 :root[color-scheme="dark"] {
-  --nl-header-bg-color: rgb(34, 37, 43); /* Dark theme background */
-  --nl-header-border: 1px solid rgba(204, 204, 220, 0.07); /* Dark theme border */
+  --nl-header-bg-color: rgb(34, 37, 43);
+  --nl-header-border: 1px solid rgba(204, 204, 220, 0.07);
 }
 
 .nl-row {
@@ -48,6 +44,7 @@
   border-radius: 20px;
   padding: 5px 10px;
   gap: 2em;
+  /* Defined light/dark here */
   background: var(--nl-header-bg-color);
   border: var(--nl-header-border);
 }
