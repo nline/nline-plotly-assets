@@ -1,3 +1,17 @@
+:root {
+  --nl-header-bg-color: rgb(
+    220,
+    220,
+    220
+  ); /* Default background for light theme */
+  --nl-header-border: 1px solid lightgray; /* Default border for light theme */
+}
+
+:root[color-scheme="dark"] {
+  --nl-header-bg-color: rgb(34, 37, 43); /* Dark theme background */
+  --nl-header-border: 1px solid rgba(204, 204, 220, 0.07); /* Dark theme border */
+}
+
 .nl-row {
   display: flex;
   column-gap: 40px;
@@ -31,11 +45,11 @@
   text-align: center;
   align-items: center;
   width: min(100%, 768px);
-  background: rgb(220, 220, 220); /* Default light background */
-  border: lightgray solid 1px; /* Default light border */
   border-radius: 20px;
   padding: 5px 10px;
   gap: 2em;
+  background: var(--nl-header-bg-color);
+  border: var(--nl-header-border);
 }
 .nl-header h1,
 h2 {
@@ -46,7 +60,7 @@ h2 {
 }
 @media screen and (max-width: 768px) {
   .nl-header {
-    flex-direction: column; /* Change layout to vertical */
+    flex-direction: column;
     gap: 0.5em;
   }
 }
