@@ -1,8 +1,6 @@
 :root {
-  --nl-header-bg-color: rgb(220, 220, 220);
-  --nl-header-border: 1px solid lightgray;
-  --nl-header-dark-bg-color: rgb(34, 37, 43);
-  --nl-header-dark-border: 1px solid rgba(204, 204, 220, 0.07);
+  --nl-header-bg-color: light-dark(rgb(220, 220, 220), rgb(34, 37, 43));
+  --nl-header-border: light-dark(lightgray, rgba(204, 204, 220, 0.07));
 }
 .nl-row {
   display: flex;
@@ -43,11 +41,6 @@
   /* Defined light/dark here */
   background: var(--nl-header-bg-color);
   border: var(--nl-header-border);
-}
-
-.nl-header[color-scheme="dark"] {
-  background: var(--nl-header-dark-bg-color) !important;
-  border: var(--nl-header-dark-border) !important;
 }
 .nl-header h1,
 h2 {
