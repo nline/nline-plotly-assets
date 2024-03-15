@@ -45,7 +45,7 @@
   border: var(--nl-header-border);
 }
 
-.ml-header[color-scheme="dark"] {
+.nl-header[color-scheme="dark"] {
   background: var(--nl-header-dark-bg-color) !important;
   border: var(--nl-header-dark-border) !important;
 }
