@@ -37,14 +37,6 @@
   padding: 5px 10px;
   gap: 2em;
 }
-
-/* Styles for dark mode */
-@media (prefers-color-scheme: dark) {
-  .nl-header {
-    background: rgb(34, 37, 43); /* Dark background */
-    border: 1px solid rgba(204, 204, 220, 0.07); /* Dark border */
-  }
-}
 .nl-header h1,
 h2 {
   margin: 5px 10px !important;
@@ -133,6 +125,6 @@ h2 {
 .mapboxgl-map {
   border-radius: 4px !important;
 }
-.btn {
+.buttons .btn {
   font-size: 12px;
 }
