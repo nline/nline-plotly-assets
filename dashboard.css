@@ -1,3 +1,13 @@
+:root {
+  --background-color: rgb(220, 220, 220);
+  --border-color: lightgray;
+}
+
+:root[color-scheme="dark"] {
+  --background-color: rgb(34, 37, 43);
+  --border-color: rgba(204, 204, 220, 0.07);
+}
+
 .nl-row {
   display: flex;
   column-gap: 40px;
