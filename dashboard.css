@@ -1,77 +1,66 @@
-:root {
-  --nl-header-bg-color: light-dark(rgb(220, 220, 220), rgb(34, 37, 43));
-  --nl-header-border: light-dark(lightgray, rgba(204, 204, 220, 0.07));
-}
 .nl-row {
   display: flex;
   column-gap: 40px;
   width: min(100%, 991px);
   margin: 10px auto;
 }
+
 .nl-full-row {
   width: min(100%, 991px);
   margin: 10px auto;
 }
+
 .nl-column {
   flex: 1;
   margin-top: 0px !important;
 }
-@media screen and (max-width: 768px) {
-  .nl-row {
-    grid-template-columns: 1fr;
-  }
-  .nl-column {
-    width: 100%;
-    margin-top: inherit !important;
-  }
-}
+
 .nl-download * {
   margin: 0 !important;
 }
+
+.nl-card {
+  color: rgb(36, 41, 46) !important;
+}
+
+/* Header styles */
 .nl-header {
   display: flex;
-  margin: auto;
   justify-content: center;
-  text-align: center;
   align-items: center;
   width: min(100%, 768px);
-  border-radius: 20px;
+  margin: auto;
   padding: 5px 10px;
   gap: 2em;
-  /* Defined light/dark here */
-  background: var(--nl-header-bg-color);
-  border: var(--nl-header-border);
+  text-align: center;
+  border-radius: 20px;
+  background: rgb(220, 220, 220);
+  border: 1px solid lightgray;
 }
+
 .nl-header h1,
-h2 {
+.nl-header h2 {
   margin: 5px 10px !important;
   font-weight: 400 !important;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (max-width: 768px) {
-  .nl-header {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-}
-.nl-card {
-  color: rgb(36, 41, 46) !important;
-}
+
+/* Home card styles */
 .nl-home-card {
   position: relative;
-  text-align: center;
   width: 100%;
-  aspect-ratio: 1 / 1;
   max-width: 225px;
   max-height: 225px;
   margin: auto;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
+  text-align: center;
   background-position: center;
-  border: lightgray solid 1px;
-  box-shadow: inset 0 0 6px rgba(20, 20, 20, 0.25) !important;
-  border-radius: 15%;
   background-size: 100% !important;
+  border: lightgray solid 1px;
+  border-radius: 15%;
+  box-shadow: inset 0 0 6px rgba(20, 20, 20, 0.25) !important;
   transition: all 0.3s ease !important;
 }
 
@@ -79,6 +68,7 @@ h2 {
   border-radius: 10% !important;
   background-size: 110% !important;
 }
+
 .nl-home-title {
   display: flex;
   justify-content: center;
@@ -87,50 +77,74 @@ h2 {
   padding: 0.5em;
   margin: auto;
   color: rgb(36, 41, 46);
-  border-bottom: lightgrey solid 1px;
   background: rgba(255, 255, 255, 0.5);
+  border-bottom: lightgrey solid 1px;
   backdrop-filter: blur(4px);
   box-shadow: 0 0 6px rgba(20, 20, 20, 0.25);
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-/* Hidden by default */
+
+/* Modal styles */
 .nl-modal {
   display: none;
   position: fixed;
   z-index: 1050;
+  inset: 0px;
   background-color: rgba(208, 209, 211, 0.24);
   backdrop-filter: blur(1px);
-  inset: 0px;
 }
-/* Modal content */
+
 .nl-modal-content {
   position: relative;
   width: min(500px, 80%);
-  background-color: white;
   margin: 20vh auto;
   padding: 24px;
+  background-color: white;
   border: 1px solid lightgrey;
   border-radius: 8px;
 }
-/* Initial state: show description, hide table */
+
+/* Toggle styles */
 #description-container {
   display: block;
 }
+
 #table-summary-container {
   display: none;
 }
 
-/* Checked state: hide description, show table */
 #toggle-description:checked ~ .description-container {
   display: none;
 }
+
 #toggle-description:checked ~ .table-summary-container {
   display: block;
 }
+
+/* Mapbox styles */
 .mapboxgl-map {
   border-radius: 4px !important;
 }
+
+/* Button styles */
 .buttons .btn {
   font-size: 12px;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .nl-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nl-column {
+    width: 100%;
+    margin-top: inherit !important;
+  }
+
+  .nl-header {
+    flex-direction: column;
+    gap: 0.5em;
+  }
 }
