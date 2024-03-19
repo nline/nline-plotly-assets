@@ -44,8 +44,8 @@
   gap: 2em;
   text-align: center;
   border-radius: 20px;
-  background: var(--background-color);
-  border: 1px solid var(--border-color);
+  background: rgb(220, 220, 220);
+  border: 1px solid lightgray;
 }
 
 .nl-header h1,
@@ -156,5 +156,12 @@
   .nl-header {
     flex-direction: column;
     gap: 0.5em;
+  }
+}
+
+.dark {
+  .nl-header {
+    background: rgb(34, 37, 43); /* Dark background */
+    border: 1px solid rgba(204, 204, 220, 0.07); /* Dark border */
   }
 }
