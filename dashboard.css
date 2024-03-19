@@ -44,8 +44,8 @@
   gap: 2em;
   text-align: center;
   border-radius: 20px;
-  background: rgb(220, 220, 220);
-  border: 1px solid lightgray;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
 }
 
 .nl-header h1,
