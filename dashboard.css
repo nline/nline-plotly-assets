@@ -34,8 +34,9 @@
   gap: 2em;
   text-align: center;
   border-radius: 20px;
-  background: rgb(220, 220, 220);
-  border: 1px solid lightgray;
+  background: light-dark(rgb(220, 220, 220), rgb(34, 37, 43));
+  border: 1px solid;
+  border-color: light-dark(lightgray, rgba(204, 204, 220, 0.07));
 }
 
 .nl-header h1,
@@ -146,12 +147,5 @@
   .nl-header {
     flex-direction: column;
     gap: 0.5em;
-  }
-}
-
-.theme-dark {
-  .nl-header {
-    background: rgb(34, 37, 43); /* Dark background */
-    border: 1px solid rgba(204, 204, 220, 0.07); /* Dark border */
   }
 }
