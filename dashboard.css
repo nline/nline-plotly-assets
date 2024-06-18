@@ -43,6 +43,7 @@
   .nl-header {
     background: rgb(220, 220, 220);
     border-color: lightgray;
+    color: rgb(36, 41, 46);
   }
 }
 
@@ -156,5 +157,6 @@
     gap: 0.5em;
   }
 }
+
 
 
