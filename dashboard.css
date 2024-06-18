@@ -39,6 +39,13 @@
   border-color: light-dark(lightgray, rgba(204, 204, 220, 0.07));
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .nl-header {
+    background: rgb(220, 220, 220);
+    border-color: lightgray;
+  }
+}
+
 .nl-header h1,
 .nl-header h2 {
   margin: 5px 10px !important;
@@ -149,3 +156,5 @@
     gap: 0.5em;
   }
 }
+
+
