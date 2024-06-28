@@ -45,6 +45,25 @@
   color: rgb(36, 41, 46);
 }
 
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nl-card:hover .tooltip {
+  visibility: visible;
+}
+
 .nl-header h1,
 .nl-header h2 {
   margin: 5px 10px !important;
