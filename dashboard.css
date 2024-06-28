@@ -39,7 +39,7 @@
   border-color: light-dark(lightgray, rgba(204, 204, 220, 0.07));
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@media not all and (min-resolution:.1dpi) {
   .nl-header {
     background: rgb(220, 220, 220);
     border-color: lightgray;
