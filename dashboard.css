@@ -53,10 +53,9 @@
   color: white;
   text-align: center;
   padding: 0.5em;
-  border-radius: 6px;
 }
 
-.nl-card:hover .tooltip {
+.nl-card:hover .nl-tooltip {
   visibility: visible;
 }
 
