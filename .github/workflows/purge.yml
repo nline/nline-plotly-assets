@@ -3,22 +3,22 @@ name: Purge Static Assets from jsDelivr
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   purge-jsdelivr-cache:
     runs-on: ubuntu-latest
     steps:
-    - name: Extract version
-      id: version
-      run: |
-        VERSION=${GITHUB_REF#refs/tags/v}
-        MAJOR_MINOR=$(echo $VERSION | cut -d. -f1,2)
-        echo "tag=$MAJOR_MINOR" >> $GITHUB_OUTPUT
+      - name: Extract version
+        id: version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          MAJOR_MINOR=$(echo $VERSION | cut -d. -f1,2)
+          echo "tag=$MAJOR_MINOR" >> $GITHUB_OUTPUT
 
-    - name: Purge jsDelivr cache
-      uses: gacts/purge-jsdelivr-cache@v1
-      with:
-        url: |
-          https://cdn.jsdelivr.net/gh/nline/nline-plotly-assets@v${{ steps.version.outputs.tag }}/dashboard.css
-          https://cdn.jsdelivr.net/gh/nline/nline-plotly-assets@v${{ steps.version.outputs.tag }}/plotly_assets/plotly_style.yml
+      - name: Purge jsDelivr cache
+        uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/nline/nline-plotly-assets@v${{ steps.version.outputs.tag }}/dashboard.css
+            https://cdn.jsdelivr.net/gh/nline/nline-plotly-assets@v${{ steps.version.outputs.tag }}/plotly_assets/plotly_style.yml
