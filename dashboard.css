@@ -176,5 +176,13 @@
 }
 
 #mega-menu-toggle {
-  display: none;
+  display: none !important;
+}
+
+[data-testid*="mega-menu"] {
+  display: none !important;
+}
+
+[data-testid*="Nav toolbar"] {
+  padding: 0px 8px 0px 8px !important;
 }
