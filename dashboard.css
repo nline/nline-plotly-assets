@@ -175,7 +175,7 @@
   }
 }
 
-#mega-menu-toggle {
+/* #mega-menu-toggle {
   display: none !important;
 }
 
@@ -185,4 +185,4 @@
 
 [data-testid*="Nav toolbar"] {
   padding: 0px 8px 0px 8px !important;
-}
+} */
