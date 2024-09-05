@@ -1,6 +1,7 @@
 .nl-row {
   display: flex;
-  column-gap: 40px;
+  flex-direction: row;
+  gap: 40px;
   margin: 10px auto;
   width: min(100%, 991px);
 }
@@ -161,7 +162,8 @@
 /* Media queries */
 @media screen and (max-width: 768px) {
   .nl-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .nl-column {
