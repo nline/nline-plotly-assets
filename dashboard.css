@@ -183,5 +183,5 @@
 
 /* Remove border on hover for panel containers */
 [class*="-panel-container-panel-transparent-container"]:hover {
-  border: none !important;
+  border: 1px solid transparent !important;
 }
