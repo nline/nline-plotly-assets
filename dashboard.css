@@ -177,10 +177,11 @@
   }
 }
 
-#mega-menu-toggle {
-  display: none !important;
-}
-
 [data-testid*="Nav toolbar"] {
   padding: 0px 8px 0px 8px !important;
+}
+
+/* Remove border on hover for panel containers */
+[class*="-panel-container-panel-transparent-container"]:hover {
+  border: none !important;
 }
